@@ -18,6 +18,9 @@ var arr = [10,20,30];
 */
 
 //Code Here
+const first = (arr) => {
+  return arr.shift();
+}
 
 
 
@@ -33,6 +36,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
+const last = (arr) => {
+  return arr.pop();
+}
 
 
 
@@ -48,6 +54,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
+const looper = (family) => {
+  return family.map(function(i){
+    alert(i);
+  })
+}
 
 
 
@@ -63,6 +74,12 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+const reversedLooper = (letters) => {
+  for(let i = letters.length - 1; i >= 0; i --){
+    alert(letters[i]);
+  }
+}
+
 
 
 
@@ -78,6 +95,17 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
+const evenFinder = nums => {
+  let evens = [];
+  nums.map(function(i){
+    if(nums[i] % 2 === 0){
+      evens.push(nums[i]);
+    }     
+  })
+  return evens;
+}
+
+
 
 
 
@@ -95,6 +123,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+let divider = numbersArray => {
+  let evens = [];
+  let odds = [];
+  for (let i = 0; i < numbersArray.length; i++) {
+    numbersArray[i] % 2 === 0
+      ? evens.push(numbersArray[i])
+      : odds.push(numbersArray[i]);
+  }
+  return [evens, odds];
+};
+
+
 
 
 
@@ -116,6 +156,21 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+const finder = arr => {
+  let check = false;
+  let randomNum = getRandomArbitrary();
+  console.log(randomNum);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === randomNum) {
+      check = true;
+    }
+  }
+  return check;
+};
+
+
+
+
 
 
 
@@ -143,8 +198,20 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, item){
+  for(var i = 0; i < myGroceryList.length; i ++){
+    if(myGroceryList[i] == item){
+      myGroceryList.splice(myGroceryList[i], 1);
+    
+    }
+  }
+  return myGroceryList;
+}
 
-
+function addItem(myGroceryList, item){
+  myGroceryList.push(item);
+  return myGroceryList;
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -153,6 +220,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function maker(){
+  let arr = [];
+  for(let i = 1; i <= 215; i ++){
+    arr.push(i);
+  }
+  return arr;
+}
 
 
 
@@ -169,6 +243,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+function addTen(numbers){
+  let arr = [];
+  for(var i = 0; i <= numbers.length; i ++){
+    numbers[i] += 10;
+    arr.push(numbers[i]);
+  }
+  return arr;
+}
 
 
 
